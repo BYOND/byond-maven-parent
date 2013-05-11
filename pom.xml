@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.byond</groupId>
+	<artifactId>byond-maven-parent</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>BYOND Maven Parent POM</name>
+	<url>http://awesomeware.org/</url>
+	<packaging>pom</packaging>
+
+	<scm>
+		<connection>scm:git:git://github.com/BYOND/byond-maven-parent.git</connection>
+		<developerConnection>scm:git:git@github.com:BYOND/byond-maven-parent.git</developerConnection>
+		<url>https://github.com/BYOND/byond-maven-parent</url>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>Nexus releases</name>
+			<url>http://awesomeware.org/nexus/content/repositories/byond-maven-releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>Nexus snapshots</name>
+			<url>http://awesomeware.org/nexus/content/repositories/byond-maven-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<properties>
+		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
+					<configuration>
+						<source>1.7</source>
+						<target>1.7</target>
+						<compilerArguments>
+							<endorseddirs>${endorsed.dir}</endorseddirs>
+						</compilerArguments>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
