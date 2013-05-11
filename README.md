@@ -1,4 +1,4 @@
 byond-maven-parent
 ==================
 
-A maven parent POM for BYOND organisation maven projects.
+A maven parent POM for BYOND organization maven projects.
