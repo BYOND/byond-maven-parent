@@ -5,6 +5,8 @@
 	<artifactId>byond-maven-parent</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>BYOND Maven Parent POM</name>
+	<description>A parent POM file, to manage core dependencies and plugins for BYOND organization maven projects.</description>
+	<inceptionYear>2013</inceptionYear>
 	<url>http://awesomeware.org/</url>
 	<packaging>pom</packaging>
 
@@ -12,7 +14,23 @@
 		<connection>scm:git:git://github.com/BYOND/byond-maven-parent.git</connection>
 		<developerConnection>scm:git:git@github.com:BYOND/byond-maven-parent.git</developerConnection>
 		<url>https://github.com/BYOND/byond-maven-parent</url>
+		<tag>HEAD</tag>
 	</scm>
+	
+	<organization>
+		<name>BYOND Organization</name>
+		<url>https://github.com/BYOND</url>
+	</organization>
+	
+	<issueManagement>
+		<system>Github</system>
+		<url>https://github.com/organizations/BYOND/dashboard/issues</url>
+	</issueManagement>
+	
+	<ciManagement>
+		<system>Jenkins CI</system>
+		<url>http://awesomeware.org/jenkins/view/BYOND%20Organization/</url>
+	</ciManagement>
 
 	<distributionManagement>
 		<repository>
@@ -31,7 +49,6 @@
 		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-
 
 	<build>
 		<pluginManagement>
