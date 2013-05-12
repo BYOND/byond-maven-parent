@@ -73,6 +73,11 @@
 			<name>Nexus snapshots</name>
 			<url>http://awesomeware.org/nexus/content/repositories/byond-maven-snapshots</url>
 		</snapshotRepository>
+		<site>
+			<id>byond</id>
+			<name>BYOND Maven Site</name>
+			<url>file:///var/www/domains/awesomeware.org/byond/html/maven/${project.groupId}/${project.artifactId}/${project.version}</url>
+		</site>
 	</distributionManagement>
 
 	<properties>
@@ -128,7 +133,7 @@
 					<dependencies>
 						<dependency>
 							<groupId>org.apache.maven.wagon</groupId>
-							<artifactId>wagon-ssh</artifactId>
+							<artifactId>wagon-file</artifactId>
 							<version>2.4</version>
 						</dependency>
 					</dependencies>
