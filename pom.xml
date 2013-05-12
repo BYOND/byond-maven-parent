@@ -4,7 +4,7 @@
 
 	<groupId>com.byond</groupId>
 	<artifactId>byond-maven-parent</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.2</version>
 	<name>BYOND Maven Parent POM</name>
 	<description>A parent POM file, to manage core dependencies and plugins for BYOND organization maven projects.</description>
 	<inceptionYear>2013</inceptionYear>
@@ -15,7 +15,7 @@
 		<connection>scm:git:git://github.com/BYOND/byond-maven-parent.git</connection>
 		<developerConnection>scm:git:git@github.com:BYOND/byond-maven-parent.git</developerConnection>
 		<url>https://github.com/BYOND/byond-maven-parent</url>
-		<tag>HEAD</tag>
+		<tag>byond-maven-parent-1.0.2</tag>
 	</scm>
 
 	<licenses>
