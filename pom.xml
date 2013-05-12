@@ -12,9 +12,9 @@
 	<packaging>pom</packaging>
 
 	<scm>
-		<connection>scm:git:git://github.com/BYOND/byond-maven-parent.git</connection>
-		<developerConnection>scm:git:git@github.com:BYOND/byond-maven-parent.git</developerConnection>
-		<url>https://github.com/BYOND/byond-maven-parent</url>
+		<connection>scm:git:git://github.com/BYOND/${project.artifactId}.git</connection>
+		<developerConnection>scm:git:git@github.com:BYOND/${project.artifactId}.git</developerConnection>
+		<url>https://github.com/BYOND/${project.artifactId}</url>
 		<tag>HEAD</tag>
 	</scm>
 
