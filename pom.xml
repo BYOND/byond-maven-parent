@@ -336,6 +336,11 @@
 		</profile>
 		<profile>
 			<id>release</id>
+			<activation>
+				<property>
+					<name>env.IS_M2RELEASEBUILD</name>
+				</property>
+			</activation>
 			<reporting>
 				<plugins>
 					<plugin>
