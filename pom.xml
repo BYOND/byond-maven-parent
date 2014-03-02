@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.byond</groupId>
 	<artifactId>byond-maven-parent</artifactId>
-	<version>1.0.9-SNAPSHOT</version>
+	<version>1.0.9</version>
 	<name>BYOND Maven Parent POM</name>
 	<description>A parent POM file, to manage core dependencies and plugins for BYOND organization maven projects.</description>
 	<inceptionYear>2013</inceptionYear>
@@ -16,7 +15,7 @@
 		<connection>scm:git:git://github.com/BYOND/${project.artifactId}.git</connection>
 		<developerConnection>scm:git:git@github.com:BYOND/${project.artifactId}.git</developerConnection>
 		<url>https://github.com/BYOND/${project.artifactId}</url>
-		<tag>HEAD</tag>
+		<tag>byond-maven-parent-1.0.9</tag>
 	</scm>
 
 	<licenses>
