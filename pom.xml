@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.byond</groupId>
@@ -36,8 +37,8 @@
 	</organization>
 
 	<issueManagement>
-		<system>Github</system>
-		<url>https://github.com/organizations/BYOND/dashboard/issues</url>
+		<system>GitHub</system>
+		<url>https://github.com/BYOND/${project.artifactId}/issues</url>
 	</issueManagement>
 
 	<ciManagement>
@@ -145,16 +146,16 @@
 				<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.16</version>
-					<configuration>  
-      					<argLine>-XX:-UseSplitVerifier</argLine>  
-    				</configuration>  
+					<configuration>
+						<argLine>-XX:-UseSplitVerifier</argLine>
+					</configuration>
 				</plugin>
 				<plugin>
 					<artifactId>maven-failsafe-plugin</artifactId>
 					<version>2.16</version>
-					<configuration>  
-      					<argLine>-XX:-UseSplitVerifier</argLine>  
-    				</configuration>  
+					<configuration>
+						<argLine>-XX:-UseSplitVerifier</argLine>
+					</configuration>
 				</plugin>
 				<plugin>
 					<artifactId>maven-verifier-plugin</artifactId>
@@ -252,6 +253,23 @@
 				<version>2.7</version>
 			</plugin>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changes-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<includeOpenIssues>false</includeOpenIssues>
+					<onlyMilestoneIssues>false</onlyMilestoneIssues>
+					<onlyCurrentVersion>true</onlyCurrentVersion>
+				</configuration>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>github-report</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+			<plugin>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>2.9.1</version>
 				<reportSets>
@@ -306,6 +324,7 @@
 
 	<profiles>
 		<profile>
+			<id>jenkins</id>
 			<activation>
 				<property>
 					<name>env.BUILD_NUMBER</name>
@@ -343,18 +362,6 @@
 			</activation>
 			<reporting>
 				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-changes-plugin</artifactId>
-						<version>2.9</version>
-						<reportSets>
-							<reportSet>
-								<reports>
-								<report>github-report</report>
-								</reports>
-							</reportSet>
-						</reportSets>
-					</plugin>
 					<plugin>
 						<artifactId>maven-javadoc-plugin</artifactId>
 						<version>2.9.1</version>
