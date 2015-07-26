@@ -258,6 +258,7 @@
 				<configuration>
 					<includeOpenIssues>true</includeOpenIssues>
 					<onlyMilestoneIssues>false</onlyMilestoneIssues>
+					<runOnlyAtExecutionRoot>true</runOnlyAtExecutionRoot>
 				</configuration>
 				<reportSets>
 					<reportSet>
